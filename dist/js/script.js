@@ -1,3 +1,4 @@
-let a = 3;
-
-const gg = 'ssds';
+$('.header__burger').on('click', function(e) {
+    e.preventDefault;
+    $(this).toggleClass('header__burger_active');
+})
