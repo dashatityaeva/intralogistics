@@ -1,15 +1,21 @@
 .header {
-    background: linear-gradient(to right, $blue 50%, $black 50%);
-    height: 76px;
-
     &__wrap {
+        background: linear-gradient(to right, $blue 50%, $black 50%);
+        height: 76px;
+    }
+
+    &__inner {
         @include f-sb-c();
         height: inherit;
     }
 
     &__logo-wrap {
-
         width: 50%;
+    }
+
+    &__logo {
+        width: 200px;
+        height: 34px;
     }
 
     &__nav-wrap {
@@ -44,7 +50,7 @@
             content: '';
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 0%;
             width: 37px;
             height: 3px;
             background-color: $white;
@@ -84,7 +90,7 @@
         }
 
         &:hover .header__menu-link_more {
-            &::after {
+            &:after {
                 border-top: 1px solid $blue;
                 border-right: 1px solid $blue;
                 margin-left: 10px;
@@ -111,7 +117,7 @@
         &_more {
             position: relative;
 
-            &::after {
+            &:after {
                 content: '';
                 position: absolute;
                 top: 50%;
@@ -160,11 +166,100 @@
         opacity: 0.8;
     }
 }
+.menu-active {
+    .header {
+        &__wrap {
+            background: linear-gradient(to right, $black 100%);
+        }
+
+        &__menu {
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: $black;
+            width: 100%;
+            height: calc(100% - 50px);
+        }
+
+        &__menu-list {
+            flex-direction: column;
+            align-items: start;
+            margin: 38px;
+
+        }
+
+        &__menu-item {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        &__submenu-wrap {
+            display: block;
+            position: static;
+        }
+
+        &__submenu-wrap {
+            padding-top: 0;
+            width: auto;
+        }
+
+        &__submenu-list {
+            padding: 0;
+            padding-top: 15px;
+        }
+
+        &__menu-item {
+            margin-bottom: 26px;
+        }
+
+        &__submenu-item {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .header {
+        &__menu-item {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+        &__menu-link {
+            &_more:after {
+               
+                right: -10px;
+            }
+        }
+}
+}
 
 @media (max-width: 768px) {
     .header {
+        &__wrap {
+            height: 50px;
+        }
+
+        &__logo {
+            width: 139px;
+            height: 22px;
+        }
+
         &__burger {
             display: block;
         }
+
+        &__nav-wrap {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__menu {
+            display: none;
+        }
     }
+
+
 }
