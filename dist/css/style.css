@@ -916,9 +916,7 @@ h4 {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.solutions__item {
-  width: 100%;
-  max-width: 258px;
+.solutions__item-wrap {
   height: 405px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -929,13 +927,15 @@ h4 {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative; }
-  .solutions__item:hover {
+  max-width: 257px;
+  position: relative;
+  margin: 0 auto; }
+  .solutions__item-wrap:hover {
     background-color: #1781C0;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s; }
-    .solutions__item:hover:after {
+    .solutions__item-wrap:hover:after {
       content: '';
       position: absolute;
       right: 21px;
@@ -969,4 +969,21 @@ h4 {
   font-size: 18px;
   line-height: 1.3;
   color: #28292A;
-  margin-left: 14px; }
+  margin-left: 14px;
+  max-width: 258px; }
+
+@media (max-width: 1024px) {
+  .solutions__group {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .solutions__item {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; } }
+
+@media (max-width: 570px) {
+  .solutions__item {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
