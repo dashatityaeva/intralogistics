@@ -1,1 +1,141 @@
+.footer {
+    &__wrap {
+        background-color: $bg-footer;
+        padding-top: 54px;
+        padding-bottom: 40px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(225, 233, 237, 0.5);
+        ;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-around;
+        width: 65%;
+    }
+
+    &__nav-item {
+        margin-bottom: 10px;
+    }
+
+    &__nav-row {
+        margin-bottom: 30px;
+    }
+
+    &__solutions {
+        max-width: 220px;
+    }
+
+    &__download-wrap {
+        width: 35%;
+
+    }
+
+    &__text {
+        font-family: 'Uni Neue Book', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.2;
+        font-variant: small-caps;
+        color: $white;
+        opacity: 0.8;
+    }
+
+    &__download-link {
+        float: right;
+        padding: 22px 40px 22px 80px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translate(0, -50%);
+            display: inline-block;
+            background-image: url(../img/download.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__address {
+        max-width: 250px;
+        margin-bottom: 15px;
+        letter-spacing: 0.7px;
+    }
+
+    &__title {
+        font-family: 'Uni Neue Regular', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.2;
+        font-variant: small-caps;
+        color: $white;
+        margin-bottom: 33px;
+    }
+
+    &__social {
+        display: inline-block;
+        width: 27px;
+        height: 25px;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-size: auto;
+
+        &:not(:last-child) {
+
+            margin-right: 40px;
+        }
+
+        &_insta {
+            background-image: url(../img/socials/insta.svg);
+        }
+
+        &_vk {
+            background-image: url(../img/socials/vk.svg);
+        }
+
+        &_teleg {
+            background-image: url(../img/socials/teleg.svg);
+        }
+    }
+
+    &__links {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__development-text {
+        display: inline-block;
+        width: 110px;
+        font-family: 'Uni Neue Book', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.51;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &__polity {
+        
+        
+        font-family: 'Uni Neue Book', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.51;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
 
