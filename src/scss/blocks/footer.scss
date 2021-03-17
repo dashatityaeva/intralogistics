@@ -15,7 +15,7 @@
 
     &__info {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 65%;
     }
 
@@ -127,9 +127,10 @@
         line-height: 1.51;
         color: rgba(255, 255, 255, 0.5);
     }
+
     &__polity {
-        
-        
+
+
         font-family: 'Uni Neue Book', sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -139,3 +140,94 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .footer {
+        &__address {
+            max-width: 220px;
+        }
+
+        &__info {
+            padding-right: 30px;
+            width: 60%;
+        }
+
+        &__download-wrap {
+            width: 40%;
+
+        }
+
+        &__solutions {
+            max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: 940px) {
+    .footer {
+        &__content {
+            flex-direction: column-reverse;
+        }
+
+        &__info {
+            padding-right: 0;
+            width: 100%;
+
+        }
+
+        &__download-wrap {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 675px) {
+    .footer {
+        &__links {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        &__social-group {
+            margin-top: 45px;
+
+        }
+
+        &__development,
+        &__polity-wrap {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        &__info {
+            flex-direction: column;
+
+        }
+
+
+        &__title {
+            font-size: 16px;
+            line-height: 1.2;
+            font-variant: small-caps;
+            color: $white;
+            margin-bottom: 15px;
+        }
+
+        &__contacts,
+        &__solutions,
+        &__info-block {
+            margin-bottom: 30px;
+        }
+
+        &__nav-row {
+            margin-bottom: 15px;
+        }
+
+        &__content {
+            padding-bottom: 0px;
+        }
+    }
+}
