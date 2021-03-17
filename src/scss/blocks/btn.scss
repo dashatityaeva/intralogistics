@@ -1,0 +1,126 @@
+.btn-wrap *,
+.btn-wrap *:before,
+.btn-wrap *:after {
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+
+.btn-wrap *:before,
+.btn-wrap *:after {
+    z-index: -1;
+}
+
+
+$position-default: null !default;
+$mix-percent-default: 15% !default;
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position($type,
+    $top: $position-default,
+    $right: $position-default,
+    $bottom: $position-default,
+    $left: $position-default) {
+    position: $type;
+    $allowed_types: absolute relative fixed;
+
+    @if not index($allowed_types, $type) {
+        @warn "Unknown position: #{$type}.";
+    }
+
+    @each $data in top $top,
+    right $right,
+    bottom $bottom,
+    left $left {
+        #{nth($data, 1)}: nth($data, 2);
+    }
+}
+
+@mixin absolute($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+    @include position(absolute, $top, $right, $bottom, $left);
+}
+
+@function tint($color, $percent: $mix-percent-default) {
+    @return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent: $mix-percent-default) {
+    @return mix(black, $color, $percent);
+}
+
+$btn-width: 300px;
+$btn-height: 60px;
+// $btn-full: $btn-height+$btn-width !default;
+// $btn-half: $btn-full/2 !default;
+// $bg-color: #eeeeee !default;
+.btn-wrap {
+
+}
+.btn-anim {
+    text-align: center;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    @include size(100%, $btn-height);
+    max-width: $btn-width;
+    margin: 1rem auto;
+    border: 1px solid currentColor;
+    $btn-color: #1781C0;
+    $btn-color-dark: shade($btn-color, 0%);
+    color: tint($btn-color);
+
+    &:before,
+    &:after,
+    span:before,
+    span:after {
+        content: '';
+        @include absolute(0);
+        @include size(25.25%, 0);
+        background-color: $btn-color-dark;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        left: 50%;
+    }
+
+    span {
+
+        &:before,
+        &:after {
+            top: auto;
+            bottom: 0;
+        }
+
+        &:before {
+            left: 25%;
+        }
+
+        &:after {
+            left: 75%;
+        }
+    }
+
+    &:hover {
+        color: tint($btn-color, 100%);
+
+        &:before,
+        &:after,
+        span:before,
+        span:after {
+            height: $btn-height;
+        }
+    }
+}
+
+.btn-wrap>a {
+    line-height: $btn-height;
+    color: $blue;
+    font-size: 18px;
+}
