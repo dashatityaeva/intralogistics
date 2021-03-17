@@ -1,6 +1,8 @@
 .solutions {
+    padding-bottom: 110px;
+
     &__wrap {
-        padding: 110px 0;
+        padding-top: 110px;
         position: relative;
 
         &:before {
@@ -21,7 +23,7 @@
         justify-content: space-between;
     }
 
-   
+
 
     &__item-wrap {
         height: 405px;
@@ -30,6 +32,7 @@
         max-width: 257px;
         position: relative;
         margin: 0 auto;
+
         &:hover {
             background-color: $blue;
             transition: 1s;
@@ -82,6 +85,127 @@
 
 }
 
+
+
+
+
+/* Слайдер */
+.slick-slider {}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {}
+
+/* Слайдер с точками */
+.slick-slider.slick-dotted {}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+}
+
+/* Слайд */
+.slick-slide {
+    outline: none;
+    
+}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {}
+
+/* Слайд основной */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрелка */
+.slick-arrow {}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {}
+
+/* Точки (булиты) */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активная точка */
+.slick-dots li.slick-active {}
+
+/* Элемент точки */
+.slick-dots li button {}
+
+.machinery {
+    padding-bottom: 110px;
+    &__slider {
+        position: relative;
+
+        .slick-arrow {
+            position: absolute;
+            // top: 50%;
+            bottom: 0;
+            z-index: 20;
+            font-size: 0;
+            width: 63px;
+            height: 53px;
+            background: $blue;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid #fff;
+                border-right: 2px solid #fff;
+
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+            &:after {
+                transform: translate(-50%, -50%) rotate(-135deg);
+            }
+        }
+
+        .slick-next {
+           left: 64px;
+            &:after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+        .slick-disabled {
+            opacity: 0.4;
+        }
+    }
+    &__slider-item {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+/////////////////////////////////////
 @media (max-width: 1024px) {
     .solutions {
         &__group {
@@ -93,9 +217,10 @@
         }
     }
 }
+
 @media (max-width: 570px) {
     .solutions {
-     
+
 
         &__item {
             flex-basis: 100%;
