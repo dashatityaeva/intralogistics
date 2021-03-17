@@ -155,14 +155,9 @@ ol {
 
 @media (max-width: $mobile-width) {
     .container {
-        padding: 0 38px;
+        padding: 0 15px;
     }
     .title-block {
         font-size: 28px;
-    }
-}
-@media (max-width: 320px) {
-    .container {
-        padding: 0 15px;
     }
 }
