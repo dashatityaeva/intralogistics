@@ -581,6 +581,13 @@ h4 {
 .menu-active .header__menu-item:not(:last-child) {
   margin-right: 0; }
 
+.menu-active .header__menu-link_more:after {
+  top: 30%;
+  right: -20px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg); }
+
 .menu-active .header__submenu-wrap {
   display: block;
   position: static; }
@@ -601,9 +608,15 @@ h4 {
 
 @media (max-width: 1080px) {
   .header__menu-item:not(:last-child) {
-    margin-right: 25px; }
+    margin-right: 40px; }
+  .header__submenu-wrap {
+    width: 450px; }
   .header__menu-link_more:after {
     right: -10px; } }
+
+@media (max-width: 870px) {
+  .header__menu-item:not(:last-child) {
+    margin-right: 27px; } }
 
 @media (max-width: 768px) {
   .header__wrap {
