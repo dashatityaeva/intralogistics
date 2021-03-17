@@ -207,7 +207,13 @@
 
         }
 
-
+&__download-link {
+    padding: 22px 11px 22px 44px;
+    font-size: 16px;
+    &:before {
+        left: 15px;
+    }
+}
         &__title {
             font-size: 16px;
             line-height: 1.2;

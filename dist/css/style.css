@@ -413,6 +413,10 @@ h4 {
   .container {
     padding: 0 38px; } }
 
+@media (max-width: 320px) {
+  .container {
+    padding: 0 15px; } }
+
 .header__wrap {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #1781C0), color-stop(50%, #28292A));
   background: -o-linear-gradient(left, #1781C0 50%, #28292A 50%);
@@ -578,7 +582,8 @@ h4 {
   left: 0;
   background-color: #28292A;
   width: 100%;
-  height: calc(100% - 50px); }
+  height: calc(100% - 50px);
+  z-index: 9999; }
 
 .menu-active .header__menu-list {
   -webkit-box-orient: vertical;
@@ -830,6 +835,11 @@ h4 {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .footer__download-link {
+    padding: 22px 11px 22px 44px;
+    font-size: 16px; }
+    .footer__download-link:before {
+      left: 15px; }
   .footer__title {
     font-size: 16px;
     line-height: 1.2;
