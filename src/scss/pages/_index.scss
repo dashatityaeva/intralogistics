@@ -208,6 +208,10 @@
 /////////////////////////////////////
 @media (max-width: 1024px) {
     .solutions {
+        padding-bottom: 99px;
+        &__wrap  {
+            padding-top: 99px;
+        }
         &__group {
             flex-wrap: wrap;
         }
@@ -216,12 +220,27 @@
             flex-basis: 50%;
         }
     }
+    .machinery {
+        padding-bottom: 130px;
+    }
+}
+@media (max-width: 915px) {
+    .machinery {
+        &__slider {
+            .slick-arrow {
+                bottom: -63px;
+                height: 40px;
+            }
+        }
+    }
 }
 
 @media (max-width: 570px) {
     .solutions {
-
-
+        padding-bottom: 77px;
+        &__wrap  {
+            padding-top: 77px;
+        }
         &__item {
             flex-basis: 100%;
         }
