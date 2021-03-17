@@ -383,7 +383,7 @@ ol {
   color: #28292A;
   margin-bottom: 50px; }
 
-.title1 {
+.h4 {
   font-family: 'Uni Neue Book';
   font-style: normal;
   font-weight: normal;
@@ -1061,6 +1061,123 @@ ol {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+
+.projects__wrap {
+  margin-bottom: 50px; }
+
+.projects__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(40, 41, 42, 0.2);
+  padding-bottom: 37px; }
+  .projects__item:not(:first-child) {
+    padding-top: 60px; }
+
+.projects__link {
+  font-family: 'Uni Neue Book', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #1781C0;
+  display: inline;
+  max-width: 750px;
+  border-bottom: 1px solid #1781C0; }
+
+.projects__description {
+  margin: 16px 0;
+  font-family: 'Uni Neue Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #28292A;
+  max-width: 900px; }
+
+.projects__logo-company {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 200px; }
+
+.projects__img {
+  width: 100%;
+  margin-bottom: 10px; }
+
+.projects__company-info {
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: right;
+  color: #28292A; }
+
+.projects__reviews {
+  padding: 58px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(40, 41, 42, 0.2); }
+
+.projects__badge {
+  min-width: 395px;
+  height: 139px;
+  background: #E1E9ED;
+  position: relative;
+  padding-left: 180px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 57px; }
+
+.projects__badge-img {
+  position: absolute;
+  bottom: 0;
+  left: 10px; }
+
+.projects__badge-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.projects__badge-name {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #28292A;
+  margin-bottom: 10px; }
+
+.projects__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #28292A;
+  margin-bottom: 10px; }
 
 @media (max-width: 1024px) {
   .solutions {

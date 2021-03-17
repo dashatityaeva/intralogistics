@@ -111,7 +111,7 @@
 /* Слайд */
 .slick-slide {
     outline: none;
-    
+
 }
 
 /* Слайд активный (показывается) */
@@ -151,6 +151,7 @@
 
 .machinery {
     padding-bottom: 110px;
+
     &__slider {
         position: relative;
 
@@ -166,6 +167,7 @@
             border: none;
             outline: none;
             cursor: pointer;
+
             &:after {
                 content: '';
                 position: absolute;
@@ -183,35 +185,141 @@
 
         .slick-prev {
             left: 0;
+
             &:after {
                 transform: translate(-50%, -50%) rotate(-135deg);
             }
         }
 
         .slick-next {
-           left: 64px;
+            left: 64px;
+
             &:after {
                 transform: translate(-50%, -50%) rotate(45deg);
             }
         }
+
         .slick-disabled {
             opacity: 0.4;
         }
     }
+
     &__slider-item {
         display: flex;
         justify-content: flex-end;
     }
 }
 
+.projects {
+    &__wrap {
+        margin-bottom: 50px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(40, 41, 42, 0.2);
+        padding-bottom: 37px;
+        &:not(:first-child) {
+            padding-top: 60px;
+        }
+    }
+
+    &__link {
+        font-family: 'Uni Neue Book', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 1.3;
+        color: $blue;
+        display: inline;
+        max-width: 750px;
+        border-bottom: 1px solid $blue;
+    }
+
+    &__description {
+        margin: 16px 0;
+        font-family: 'Uni Neue Regular', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $black;
+        max-width: 900px;
+    }
+
+    &__logo-company {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 200px;
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__company-info {
+        font-size: 16px;
+        line-height: 1.2;
+        text-align: right;
+        color: $black;
+    }
+
+    &__reviews {
+        padding: 58px 0;
+        display: flex;
+        border-bottom: 1px solid rgba(40, 41, 42, 0.2);
+    }
+
+    &__badge {
+        min-width: 395px;
+        height: 139px;
+        background: $accent;
+        position: relative;
+        padding-left: 180px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        margin-right: 57px;
+    }
+
+    &__badge-img {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+    }
+
+    &__badge-content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__badge-name {
+        font-size: 20px;
+        line-height: 1.2;
+        color: $black;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: $black;
+        margin-bottom: 10px;
+    }
+}
 
 /////////////////////////////////////
 @media (max-width: 1024px) {
     .solutions {
         padding-bottom: 99px;
-        &__wrap  {
+
+        &__wrap {
             padding-top: 99px;
         }
+
         &__group {
             flex-wrap: wrap;
         }
@@ -220,10 +328,12 @@
             flex-basis: 50%;
         }
     }
+
     .machinery {
         padding-bottom: 130px;
     }
 }
+
 @media (max-width: 915px) {
     .machinery {
         &__slider {
@@ -238,9 +348,11 @@
 @media (max-width: 570px) {
     .solutions {
         padding-bottom: 77px;
-        &__wrap  {
+
+        &__wrap {
             padding-top: 77px;
         }
+
         &__item {
             flex-basis: 100%;
         }
