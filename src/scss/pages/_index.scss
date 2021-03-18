@@ -376,7 +376,7 @@
     &__name-wrap,
     &__phone-wrap {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 45%;
     }
 
@@ -397,8 +397,8 @@
         font-size: 16px;
         line-height: 160%;
         color: rgba(40, 41, 42, 0.5);
-
     }
+  
 
     &__info {
         display: flex;
@@ -410,11 +410,15 @@
         width: 100%;
         min-height: 116px;
         padding: 13px 20px;
+        border: none;
         outline: none;
         resize: none;
         font-size: 16px;
         line-height: 160%;
         color: rgba(40, 41, 42, 0.5);
+        &::-webkit-scrollbar {
+            width: 0;
+          }
     }
 
     &__order-wrap {
@@ -452,6 +456,17 @@
         color: $white;
         border-bottom: 1px solid  $white;
     }
+}
+.invalid {
+    border: 1px solid #F33240;
+    border-top: none;
+    color:#F33240;
+}
+.invalid ~ .requisition__label{
+    color:#F33240;
+}
+.valid ~ .requisition__label{
+    color: $white;
 }
 
 /////////////////////////////////////

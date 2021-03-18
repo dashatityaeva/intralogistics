@@ -196,28 +196,29 @@
                         <p class="requisition__content">Воспользуйтесь формой или сразу звоните</p>
                         <p class="requisition__content"> 8 (800) 500-83-24</p>
                     </div>
-                    <form action="" class="requisition__form">
+                    <form action="" class="requisition__form" id="formOrder">
                         <div class="requisition__data">
                             <div class="requisition__name-wrap">
+                                <input class="requisition__input" id="name" type="text" name="name">
                                 <label class="requisition__label" for="name">Имя</label>
-                                <input class="requisition__input" id="name">
                             </div>
                             <div class="requisition__phone-wrap">
+                                <input type="tel" class="requisition__input" id="phone" type="tel" name="phone">
                                 <label class="requisition__label" for="phone">Телефон</label>
-                                <input type="tel" class="requisition__input" id="phone">
                             </div>
                         </div>
                         <div class="requisition__info">
                             <label class="requisition__label" for="info">Коротко о задаче</label>
-                            <textarea class="requisition__textarea" name="info" id="info" ></textarea>
+                            <textarea class="requisition__textarea" name="info" id="info"></textarea>
                         </div>
                         <div class="requisition__order-wrap">
                             <button class="requisition__btn" type="submit">Оставить заявку</button>
                             <div class="requisition__text-wrap">
-                                <p class="requisition__text">Отправка сообщения означает согласие на обработку <a class="requisition__link" href="polity.html">персональных данных</a></p>
-                       
+                                <p class="requisition__text">Отправка сообщения означает согласие на обработку <a
+                                        class="requisition__link" href="polity.html">персональных данных</a></p>
+
                             </div>
-                             </div>
+                        </div>
 
                     </form>
                 </div>
@@ -244,6 +245,8 @@
     @@include('parts/footer.html')
     <script src="js/assets/jquery.min.js"></script>
     <script src="js/assets/slick.min.js"></script>
+    <script src="js/assets/jquery.maskedinput.min.js"></script>
+    <script src="js/assets/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -38,8 +38,35 @@
         }, '300');
     });
 
+    //========маска телефона=======
+    $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
+    //============валидация============
+    $('#formOrder').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            phone: {
+                required: true,
+                minlength: 10
+            }
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: ''
+            },
+            phone: {
+                required: '',
+                minlength: ''
+            }
+
+        },
+        errorClass: 'invalid'
+    });
 
     //============стилизованный скролл================
-  
+
 })(jQuery);

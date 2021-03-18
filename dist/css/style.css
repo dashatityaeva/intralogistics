@@ -2523,10 +2523,10 @@ ol {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     width: 45%; }
   .requisition__label {
     font-size: 18px;
@@ -2558,11 +2558,14 @@ ol {
     width: 100%;
     min-height: 116px;
     padding: 13px 20px;
+    border: none;
     outline: none;
     resize: none;
     font-size: 16px;
     line-height: 160%;
     color: rgba(40, 41, 42, 0.5); }
+    .requisition__textarea::-webkit-scrollbar {
+      width: 0; }
   .requisition__order-wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2598,6 +2601,17 @@ ol {
   .requisition__link {
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF; }
+
+.invalid {
+  border: 1px solid #F33240;
+  border-top: none;
+  color: #F33240; }
+
+.invalid ~ .requisition__label {
+  color: #F33240; }
+
+.valid ~ .requisition__label {
+  color: #FFFFFF; }
 
 @media (max-width: 1024px) {
   .solutions {
