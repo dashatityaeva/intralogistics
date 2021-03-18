@@ -71,6 +71,7 @@ $btn-height: 60px;
     $btn-color: #1781C0;
     $btn-color-dark: shade($btn-color, 0%);
     color: tint($btn-color);
+    margin-bottom: 0;
 
     &:before,
     &:after,

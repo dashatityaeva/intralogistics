@@ -176,3 +176,9 @@ $bg-color: #eeeeee !default;
     }
 }
 
+.mycustom-scroll {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
