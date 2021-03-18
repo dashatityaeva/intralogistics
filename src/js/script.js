@@ -5,6 +5,7 @@
         e.preventDefault;
         $(this).toggleClass('header__burger_active');
         $('.header').toggleClass('menu-active');
+        $('body').toggleClass('overflow-hidden');
     })
     //=======слайдеры=====
     $('#slider1').slick({
@@ -18,7 +19,6 @@
         waitForAnimate: false
 
     });
-
 
     //=======скролл наверх=====
     let btn = $('.scroll__btn');
@@ -39,34 +39,48 @@
     });
 
     //========маска телефона=======
-    $('input[type="tel"]').mask("+7 (999) 999-99-99");
+    // $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
-    //============валидация============
-    $('#formOrder').validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
-            },
-            phone: {
-                required: true,
-                minlength: 10
-            }
-        },
-        messages: {
-            name: {
-                required: '',
-                minlength: ''
-            },
-            phone: {
-                required: '',
-                minlength: ''
-            }
+    // //============валидация============
+    // $('#formOrder').validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //             minlength: 2
+    //         },
+    //         phone: {
+    //             required: true,
+    //             minlength: 10
+    //         }
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: '',
+    //             minlength: ''
+    //         },
+    //         phone: {
+    //             required: '',
+    //             minlength: ''
+    //         }
 
-        },
-        errorClass: 'invalid'
-    });
+    //     },
+    //     errorClass: 'invalid'
+    // });
 
     //============стилизованный скролл================
+
+
+  $('.dots__item').mouseover(function() {
+      $(this).data("dots");
+      alert(  $(this).data("dots"));
+  })
+let d=1;
+//  let a = `$(".machinery__info[data-text=${1}]")`;
+ let a = $(".machinery__info[data-text=1]").addClass('current');
+
+
+
+
+
 
 })(jQuery);

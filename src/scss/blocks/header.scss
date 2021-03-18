@@ -141,6 +141,7 @@
         left: -135%;
         padding-top: 40px;
         width: 566px;
+        z-index: 2;
     }
 
     &__submenu-list {
@@ -227,7 +228,9 @@
         }
     }
 }
-
+.overflow-hidden {
+    overflow: hidden;
+}
 @media (max-width: 1080px) {
     .header {
         &__menu-item {

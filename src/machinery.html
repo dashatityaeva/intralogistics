@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интралогистика - Оборудование</title>
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
+
+
 <body>
-@@include('parts/header.html')
+    @@include('parts/header.html')
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <a href="#" class="breadcrumbs__link breadcrumbs__link_back withoutslash">Назад</a>
+                <a href="#" class="breadcrumbs__link">Главная</a>
+                <a href="#" class="breadcrumbs__link">Решения</a>
+                <a href="#" class="breadcrumbs__link withoutslash">1</a>
+            </div>
+        </section>
+
+        <section class="machinery">
+            <div class="container">
+                <h2 class="title-block">Название машины или решения</h2>
+                <div class="machinery__wrap">
+                    <div class="machinery__img-wrap">
+                        <img class="machinery__img" src="img/main-machinery.png" alt="">
+                        <div class="dots">
+                            <div class="dots__item" data-dots="1">OOOO</div>
+                            <div class="dots__item" data-dots="2">OOOO</div>
+                        </div>
+                    </div>
+                    <div class="machinery__info-wrap" data-simplebar>
+                        <div class="machinery__info-item">
+                            <p class="machinery__info" data-text="1">1. Описание первого пункта в нескольких
+                                предложениях: что было
+                                сделано, за что отвечает данный пункт.</p>
+                        </div>
+                        <div class="machinery__info-item">
+                            <p class="machinery__info" data-text="2">2. Описание второго пункта в нескольких
+                                предложениях: что было
+                                сделано, за что отвечает данный пункт.</p>
+                        </div>
+                        <div class="machinery__info-item">
+                            <p class="machinery__info">3. Описание второго пункта в нескольких предложениях.</p>
+                        </div>
+                        <div class="machinery__info-item">
+                            <p class="machinery__info">4. Описание второго пункта в нескольких предложениях.</p>
+                        </div>
+                        <div class="machinery__info-item">
+                            <p class="machinery__info">5. Описание второго пункта в нескольких предложениях.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+    @@include('parts/footer.html')
+    <script src="js/assets/jquery.min.js"></script>
+    <script src="js/assets/slick.min.js"></script>
+    <script src="js/assets/simplebar.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
