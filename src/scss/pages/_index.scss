@@ -491,7 +491,7 @@
     }
     .requisition {
         &__form-wrap {
-            
+            flex-wrap: wrap;
         }
     }
 }
@@ -513,6 +513,25 @@
 
         &__description {
             font-size: 16px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .requisition {
+        &__form {
+            padding: 30px 50px;
+        }
+        &__banner {
+            height: 250px;
+        }
+        &__data {
+            flex-wrap: wrap;
+        }
+        &__name-wrap, &__phone-wrap {
+            width: 100%;
+        }
+        &__name-wrap {
+            margin-bottom: 26px;
         }
     }
 }
@@ -549,6 +568,33 @@
         &__badge {
             padding-left: 145px;
             padding-right: 10px;
+        }
+    }
+    .requisition {
+        &__title {
+            font-size: 28px;
+        }
+        &__form {
+            padding: 30px 10px;
+        }
+        &__banner {
+            padding: 30px;
+            height: auto;
+            min-width: auto;
+        }
+        &__content {
+            max-width: none;
+            margin-bottom: 5px;
+        }
+        &__order-wrap {
+            flex-direction: column-reverse;
+        }
+        &__text-wrap {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        &__btn {
+            width: 100%;
         }
     }
 }
