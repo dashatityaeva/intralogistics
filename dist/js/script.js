@@ -20,6 +20,19 @@
 
     });
 
+    $('#equipments-slider').slick({
+        infinite: false,
+        dots: true,
+        // autoplay: true,
+        autoplaySpeed: 1500,
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        pauseOnDotsHover: true,
+        draggable: false,
+        waitForAnimate: false
+
+    });
+
     //=======скролл наверх=====
     let btn = $('.scroll__btn');
 
