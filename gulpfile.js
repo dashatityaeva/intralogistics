@@ -48,7 +48,7 @@ function scss() {
         .pipe(dest('dist/css'))
 }
 function imgmin() {
-    return src('src/img/**/*.+(png|jpg|gif|svg)')
+    return src('src/img/**/*.+(png|jpg|gif|svg|mp4)')
     .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
