@@ -1900,13 +1900,89 @@ ol {
     .equipments__slider .slick-disabled {
       opacity: 0.4; }
 
+.personation {
+  padding-bottom: 110px; }
+  .personation__block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; }
+    .personation__block:after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/accent3.png);
+      background-repeat: no-repeat;
+      width: 298px;
+      height: 278px;
+      bottom: 0;
+      right: 2%;
+      z-index: -1; }
+  .personation__content-wrap {
+    width: 851px;
+    min-height: 619px;
+    background: #E1E9ED;
+    padding: 54px 300px 65px 65px; }
+  .personation__text {
+    font-size: 14px;
+    line-height: 1.44;
+    color: #28292A; }
+  .personation__video-wrap {
+    margin-left: -170px;
+    margin-top: 66px;
+    width: 489px;
+    height: 336px; }
+  .personation__video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .personation__list-item {
+    margin-bottom: 10px; }
+  .personation__list {
+    margin-bottom: 40px; }
+  .personation__info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .personation__img-wrap {
+    background-color: #1781C0;
+    min-width: 195px;
+    height: 195px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .personation__info-text {
+    padding: 35px 76px 48px 48px; }
+
 .characteristics {
   padding-bottom: 110px; }
   .characteristics__wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    position: relative; }
+    .characteristics__wrap:after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/accent.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 159px;
+      height: 159px;
+      bottom: -3%;
+      right: -1%; }
   .characteristics__video-wrap {
     width: 489px;
     height: 336px; }
@@ -1947,6 +2023,68 @@ ol {
     font-size: 16px; }
   .characteristics__indicator {
     font-size: 32px; }
+
+.solving {
+  padding-bottom: 110px; }
+  .solving__title {
+    text-align: center; }
+  .solving__group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .solving__item {
+    width: 333px;
+    min-height: 368px;
+    background-color: #E1E9ED;
+    margin-left: 35px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .solving__item:hover {
+      background-color: #1781C0; }
+  .solving__item:hover .solving__subtitle {
+    color: #FFFFFF; }
+    .solving__item:hover .solving__subtitle:after {
+      border-top: 2px solid #FFFFFF;
+      border-right: 2px solid #FFFFFF; }
+  .solving__item:hover .solving__img-wrap {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); }
+  .solving__img-wrap {
+    width: 100%;
+    max-height: 244px;
+    overflow: hidden;
+    margin-left: -35px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+  .solving__img {
+    width: inherit; }
+  .solving__subtitle {
+    padding: 39px 50px 15px 30px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #28292A;
+    position: relative; }
+    .solving__subtitle:after {
+      content: '';
+      position: absolute;
+      right: 35px;
+      top: 55px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #28292A;
+      border-right: 2px solid #28292A;
+      -webkit-transform: translate(0, -50%) rotate(45deg);
+      -ms-transform: translate(0, -50%) rotate(45deg);
+      transform: translate(0, -50%) rotate(45deg); }
 
 .block {
   max-width: 400px;
