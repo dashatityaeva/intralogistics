@@ -83,19 +83,6 @@
     //============стилизованный скролл================
 
 
-//   $('.dots__item').mouseover(function() {
-//       $(this).data("dots");
-//       alert(  $(this).data("dots"));
-//   })
-// let d=1;
-//  let a = `$(".machinery__info[data-text=${1}]")`;
-//  let a = $(".machinery__info[data-text=1]").addClass('current');
-
-
-
-
-
-
 })(jQuery);
 
 let machineryInfoElem = document.querySelectorAll('.machinery__info');
@@ -103,7 +90,6 @@ let dotsItemElem = document.querySelectorAll('.dots__item');
 
 
 const addFocus = (index) => {
-    console.log(index);
     dotsItemElem.forEach(dot => {
         if (dot.dataset.dots === index) {
             dot.classList.add('current');
@@ -111,7 +97,6 @@ const addFocus = (index) => {
     })
 }
 const removeFocus = (index) => {
-    console.log(index);
     dotsItemElem.forEach(dot => {
         if (dot.dataset.dots === index) {
             dot.classList.remove('current');
