@@ -9,5 +9,55 @@
 </head>
 <body>
 @@include('parts/header.html')
+<main>
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html" class="breadcrumbs__link breadcrumbs__link_back withoutslash">Назад</a>
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+            <a href="solutions.html" class="breadcrumbs__link withoutslash">Решения</a>
+        </div>
+    </section>
+    <section class="solutions">
+        <div class="solutions__wrap">
+            <div class="container">
+                <div class="solutions__group">
+                    <a href="project.html" class="solutions__item">
+                        <div class="solutions__item-wrap">
+                            <div class="solutions__img-wrap">
+                                <img class="solutions__img" src="img/solutions/solution1.jpg" alt="">
+                            </div>
+                            <p class="solutions__title">Станции для сканирования, измерение ВГХ и веса</p>
+                        </div>
+                    </a>
+                    <a href="project.html" class="solutions__item">
+                        <div class="solutions__item-wrap">
+                            <div class="solutions__img-wrap">
+                                <img class="solutions__img" src="img/solutions/solution2.jpg" alt="">
+                            </div>
+                            <p class="solutions__title">Линии сортировки отправлений</p>
+                        </div>
+                    </a>
+                    <a href="project.html" class="solutions__item">
+                        <div class="solutions__item-wrap">
+                            <div class="solutions__img-wrap">
+                                <img class="solutions__img" src="img/solutions/solution3.jpg" alt="">
+                            </div>
+                            <p class="solutions__title">Автоматизация линий</p>
+                        </div>
+                    </a>
+                    <a href="project.html" class="solutions__item">
+                        <div class="solutions__item-wrap">
+                            <div class="solutions__img-wrap">
+                                <img class="solutions__img" src="img/solutions/solution4.jpg" alt="">
+                            </div>
+                            <p class="solutions__title">Система видеонаблюдения с ХИКРОБОТ</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('parts/footer.html')
 </body>
 </html>
