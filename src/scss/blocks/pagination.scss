@@ -1,0 +1,42 @@
+.pagination {
+    padding-bottom: 110px;
+    &__pages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__page {
+        font-size: 18px;
+        line-height: 120%;
+        color: rgba(40, 41, 42, 0.5);
+        margin-right: 20px;
+        padding: 0 5px;
+        &_active {
+            color: $black;
+            border-bottom: 2px solid $black;
+        }
+    }
+
+    &__arrow {
+
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid $black;
+        border-right: 2px solid $black;
+
+        &_prev {
+            transform: rotate(-135deg);
+            margin-right: 20px;
+        }
+
+        &_next {
+            transform: rotate(45deg);
+        }
+        &_disabled {
+            border-top: 2px solid rgba(40, 41, 42, 0.5);
+            border-right: 2px solid rgba(40, 41, 42, 0.5);
+        }
+    }
+}

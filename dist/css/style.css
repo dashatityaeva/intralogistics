@@ -1132,6 +1132,49 @@ ol {
     bottom: 48px;
     right: 6px; } }
 
+.pagination {
+  padding-bottom: 110px; }
+  .pagination__pages {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .pagination__page {
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(40, 41, 42, 0.5);
+    margin-right: 20px;
+    padding: 0 5px; }
+    .pagination__page_active {
+      color: #28292A;
+      border-bottom: 2px solid #28292A; }
+  .pagination__arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #28292A;
+    border-right: 2px solid #28292A; }
+    .pagination__arrow_prev {
+      -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+      margin-right: 20px; }
+    .pagination__arrow_next {
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .pagination__arrow_disabled {
+      border-top: 2px solid rgba(40, 41, 42, 0.5);
+      border-right: 2px solid rgba(40, 41, 42, 0.5); }
+
 .btn-wrap *,
 .btn-wrap *:before,
 .btn-wrap *:after {
