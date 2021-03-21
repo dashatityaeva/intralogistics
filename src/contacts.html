@@ -9,5 +9,81 @@
 </head>
 <body>
 @@include('parts/header.html')
+<main>
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html" class="breadcrumbs__link breadcrumbs__link_back withoutslash">Назад</a>
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+            <a href="contacts.html" class="breadcrumbs__link withoutslash">Контакты</a>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container">
+            <h1 class="title-block contacts__title">Контакты</h1>
+            <div class="contacts__wrap">
+                <div class="contacts__item contacts__item_phone">
+                    <h4 class="contacts__subtitle">Отдел продаж</h4>
+                    <a class="contacts__phone" href="tel:+74951505527">8 (495) 150-55-27 (Москва)</a>
+                    <a class="contacts__phone" href="tel:+78005008324">8-800-500-83-24 (бесплатно)</a>
+                </div>
+                <div class="contacts__item contacts__item_geo">
+                    <h4 class="contacts__subtitle">Адрес</h4>
+                    <address class="contacts__address">г. Москва, переулок Большой Харитоньевский,дом 21, строение 4</address>
+                </div>
+                <div class="contacts__item contacts__item_mail">
+                    <h4 class="contacts__subtitle">Почта</h4>
+                    <a class="contacts__mail" href="mailto:info@conveermash.ru">info@conveermash.ru</a>
+                    <span class="contacts__mail-text">Для клиентов</span>
+                    <a class="contacts__mail" href="mailto:info@conveermash2.ru">info@conveermash2.ru</a>
+                    <span class="contacts__mail-text">Для партнеров</span>
+                </div>
+            </div>
+            <div class="contacts__map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d820d8fbc2dd9a6f223c1f78b8882f8faa607d880fb13a14e6bd52316cf6c4b&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </section>
+    <section class="requisition">
+        <div class="container">
+            <div class="requisition__form-wrap">
+                <div class="requisition__banner">
+                    <h2 class="requisition__title">Хотите обсудить проект?</h2>
+                    <p class="requisition__content">Воспользуйтесь формой или сразу звоните</p>
+                    <p class="requisition__content"> 8 (800) 500-83-24</p>
+                </div>
+                <form action="" class="requisition__form" id="formOrder">
+                    <div class="requisition__data">
+                        <div class="requisition__name-wrap">
+                            <input class="requisition__input" id="name" type="text" name="name">
+                            <label class="requisition__label" for="name">Имя</label>
+                        </div>
+                        <div class="requisition__phone-wrap">
+                            <input type="tel" class="requisition__input" id="phone" type="tel" name="phone">
+                            <label class="requisition__label" for="phone">Телефон</label>
+                        </div>
+                    </div>
+                    <div class="requisition__info">
+                        <label class="requisition__label" for="info">Коротко о задаче</label>
+                        <textarea class="requisition__textarea" name="info" id="info"></textarea>
+                    </div>
+                    <div class="requisition__order-wrap">
+                        <button class="requisition__btn" type="submit">Оставить заявку</button>
+                        <div class="requisition__text-wrap">
+                            <p class="requisition__text">Отправка сообщения означает согласие на обработку <a
+                                    class="requisition__link" href="polity.html">персональных данных</a></p>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('parts/footer.html')
+<script src="js/assets/jquery.min.js"></script>
+<script src="js/assets/jquery.maskedinput.min.js"></script>
+<script src="js/assets/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
