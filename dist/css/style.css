@@ -2717,3 +2717,177 @@ ol {
   .contacts__item {
     width: 100%;
     margin-bottom: 10px; } }
+
+.project {
+  padding-bottom: 110px; }
+  .project__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 20px; }
+    .project__item:not(:first-child) {
+      padding-top: 60px; }
+  .project__name-wrap {
+    max-width: 750px;
+    margin-bottom: 57px; }
+  .project__title {
+    font-family: 'Uni Neue Book', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #28292A;
+    display: inline;
+    max-width: 750px; }
+  .project__description {
+    margin: 16px 0;
+    font-family: 'Uni Neue Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #28292A;
+    max-width: 900px; }
+  .project__logo-company {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    max-width: 200px;
+    margin-left: 15px; }
+  .project__img {
+    width: 100%;
+    margin-bottom: 10px; }
+  .project__company-info {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: right;
+    color: #28292A; }
+  .project__content {
+    border-bottom: 1px solid rgba(40, 41, 42, 0.2);
+    padding-bottom: 30px; }
+  .project__paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #28292A;
+    margin-bottom: 22px; }
+  .project__accent {
+    background-color: #E1E9ED;
+    border-left: 4px solid #1781C0;
+    padding: 38px 64px;
+    margin: 60px 0; }
+  .project__info {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #28292A; }
+  .project__subtitle-2, .project__subtitle-3, .project__subtitle-4 {
+    font-family: 'Uni Neue Book', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #28292A; }
+  .project__subtitle-2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-top: 100px;
+    margin-bottom: 50px; }
+  .project__subtitle-3 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-top: 115px;
+    margin-bottom: 54px; }
+  .project__subtitle-4 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 55px;
+    margin-bottom: 40px; }
+  .project__list-item {
+    position: relative;
+    padding-left: 72px;
+    margin-bottom: 30px;
+    max-width: 950px; }
+    .project__list-item:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(../img/check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #1781C0;
+      width: 45px;
+      height: 45px; }
+  .project__num-list {
+    margin-bottom: 40px; }
+  .project__num-item {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 39px;
+    margin-bottom: 14px; }
+    .project__num-item:before {
+      content: counter(step-counter);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-color: #1781C0;
+      color: #FFFFFF;
+      font-size: 14px;
+      text-align: center; }
+
+@media (max-width: 768px) {
+  .project__title, .project__subtitle-2 {
+    font-size: 28px; }
+  .project__subtitle-3, .project__subtitle-4 {
+    font-size: 22px; } }
+
+@media (max-width: 550px) {
+  .project {
+    padding-bottom: 77px; }
+    .project__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .project__logo-company {
+      margin-left: 0;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .project__company-info {
+      text-align: left; }
+    .project__accent {
+      padding: 38px 15px; }
+    .project__name-wrap {
+      margin-bottom: 30px; }
+    .project__subtitle-2 {
+      margin-top: 50px;
+      margin-bottom: 30px; }
+    .project__subtitle-3 {
+      margin-top: 50px;
+      margin-bottom: 20px; }
+    .project__subtitle-4 {
+      margin-top: 30px;
+      margin-bottom: 20px; }
+    .project__list-item {
+      padding-left: 55px; }
+      .project__list-item:before {
+        width: 35px;
+        height: 35px; } }
