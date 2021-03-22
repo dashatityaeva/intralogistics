@@ -2712,3 +2712,8 @@ ol {
 
 .contacts__mail-text {
   margin-bottom: 10px; }
+
+@media (max-width: 900px) {
+  .contacts__item {
+    width: 100%;
+    margin-bottom: 10px; } }
