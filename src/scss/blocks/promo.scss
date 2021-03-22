@@ -1,0 +1,198 @@
+.promo {
+    width: 100%;
+    height: 590px;
+    position: relative;
+
+    &:before {
+        content: '';
+        background: radial-gradient(28% 46% at 0% 6%, #17afff 0, rgba(23, 175, 255, 0) 82%), linear-gradient(to right, #1781c0 50%, transparent 50%);
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            background-image: linear-gradient(to right, #1781c0 50%, transparent 50%), url(../img/Frame.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 90%;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .slick-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // height: 90%;
+        }
+
+        .slick-list,
+        .slick-track {
+            height: 100%;
+        }
+
+        .slick-arrow {}
+
+        .slick-prev {
+            visibility: hidden;
+            display: none;
+            border: none;
+            width: 0;
+            height: 0;
+            font-size: 0;
+
+        }
+
+        .slick-next {
+            position: absolute;
+            // top: 50%;
+            bottom: 0;
+            z-index: 20;
+            font-size: 0;
+            width: 63px;
+            height: 33px;
+            background: rebeccapurple;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid rgb(17, 221, 51);
+                border-right: 2px solid rgb(22, 187, 63);
+
+            }
+
+            left: 64px;
+
+            &:after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
+    &__slider-item {
+        position: relative;
+    }
+
+    &__slider-item,
+    &__slider-img {
+        height: 100%;
+    }
+
+    &__slider-img[data-pos="machinery1"] {
+        position: relative;
+        right: 16px;
+    }
+
+    &__slider-img[data-pos="machinery2"] {
+        position: relative;
+        right: 45px;
+    }
+
+    &__slider-text {
+        font-family: 'Uni Neue Book', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        position: absolute;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 350px;
+
+        &_top {
+            color: $white;
+            top: 15%;
+            left: 0;
+        }
+
+        &_bottom {
+            color: $black;
+            bottom: 25%;
+            right: 0;
+        }
+    }
+
+    &__dot-img {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        background-color: $blue;
+        border: 5px solid $white;
+        border-radius: 50%;
+        box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+        z-index: 20;
+    }
+
+    &__dot {
+        position: absolute;
+
+    }
+
+    &__dot-text {
+        position: absolute;
+        top: 72%;
+        left: 16%;
+        background-color: $white;
+        padding: 10px 10px 10px 20px;
+        z-index: 10;
+        font-size: 16px;
+        line-height: 1.1;
+        color: $black;
+        box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    &__dot[data-promo-dot="1"] {
+        top: 70%;
+        left: 15%;
+
+    }
+
+    &__dot[data-promo-dot="2"] {
+        top: 30%;
+        left: 43%;
+    }
+
+    &__dot[data-promo-dot="3"] {
+        top: 55%;
+        left: 57%;
+    }
+
+
+    &__dot[data-promo-dot="4"] {
+        top: 24%;
+        left: 73%;
+    }
+}

@@ -10,6 +10,7 @@
     })
 
 
+
     //=======слайдеры=====
     if (!!($('#slider1').length)) {
         $('#slider1').slick({
@@ -38,6 +39,48 @@
             waitForAnimate: false
         });
     }
+ 
+    if (!!($('#promo-slider').length)) {
+        $('#promo-slider').slick({
+            infinite: true,
+            // dots: true,
+            // autoplay: true,
+            autoplaySpeed: 9000,
+            pauseOnFocus: true,
+            pauseOnHover: true,
+            pauseOnDotsHover: true,
+            draggable: false,
+            waitForAnimate: false,
+            // fade: true,
+            // cssEase: 'ease-out'
+            
+        });
+    }
+
+    //============promo-animation==============
+    
+    // $('#promo-slider').on('beforeChange', function(){
+    //     var currentSlide = $('#promo-slider').slick('slickCurrentSlide');
+    //     console.log(currentSlide);
+    //   });
+    // $('#promo-slider').on('reInit', function(slick){
+    //     console.log(slick);
+    //   });
+    // var currentSlide = $('#promo-slider').slick('slickCurrentSlide');
+    // console.log('currentSlide: ', currentSlide);
+
+  
+    // console.log(  $('#promo-slider').slick('getSlick'));
+    // $('#promo-slider').on('beforeChange', function(currentSlide){
+       
+        
+    //   });
+
+
+
+
+
+
 
 
     //=======скролл наверх=====
