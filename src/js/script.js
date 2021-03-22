@@ -6,9 +6,10 @@
         $(this).toggleClass('header__burger_active');
         $('.header').toggleClass('menu-active');
         $('body').toggleClass('overflow-hidden');
+        $('header').toggleClass('pos-stat');
     })
 
-    
+
     //=======слайдеры=====
     if (!!($('#slider1').length)) {
         $('#slider1').slick({
@@ -20,24 +21,24 @@
             pauseOnDotsHover: true,
             draggable: false,
             waitForAnimate: false
-    
+
         });
     }
-   
-if (!!($('#equipments-slider').length)) {
-    $('#equipments-slider').slick({
-        infinite: false,
-        dots: true,
-        // autoplay: true,
-        autoplaySpeed: 1500,
-        pauseOnFocus: true,
-        pauseOnHover: true,
-        pauseOnDotsHover: true,
-        draggable: false,
-        waitForAnimate: false
-    });
-}
-   
+
+    if (!!($('#equipments-slider').length)) {
+        $('#equipments-slider').slick({
+            infinite: false,
+            dots: true,
+            // autoplay: true,
+            autoplaySpeed: 1500,
+            pauseOnFocus: true,
+            pauseOnHover: true,
+            pauseOnDotsHover: true,
+            draggable: false,
+            waitForAnimate: false
+        });
+    }
+
 
     //=======скролл наверх=====
     let btn = $('.scroll__btn');
@@ -110,7 +111,7 @@ if (!!($('#equipments-slider').length)) {
         errorClass: 'invalid'
     });
 
-    
+
 
 
 })(jQuery);
@@ -137,11 +138,10 @@ const removeFocus = (index) => {
 
 machineryInfoElem.forEach(item => {
     let index = item.dataset.text;
-   item.addEventListener('mouseover', function() {
-       addFocus(index);
-   });
-   item.addEventListener('mouseout', function() {
-    removeFocus(index);
-});
+    item.addEventListener('mouseover', function () {
+        addFocus(index);
+    });
+    item.addEventListener('mouseout', function () {
+        removeFocus(index);
+    });
 })
-

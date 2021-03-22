@@ -1,4 +1,7 @@
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
     &__wrap {
         background: linear-gradient(to right, $blue 50%, $black 50%);
         height: 76px;
@@ -170,6 +173,7 @@
 
 .menu-active {
     .header {
+      
         &__wrap {
             background: linear-gradient(to right, $black 100%);
         }
@@ -230,6 +234,9 @@
 }
 .overflow-hidden {
     overflow: hidden;
+}
+.pos-stat {
+    position: static;
 }
 @media (max-width: 1080px) {
     .header {

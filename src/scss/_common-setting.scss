@@ -48,7 +48,9 @@ body {
     color: $black;
 
 }
-
+main{
+    padding-top: 76px;
+}
 a {
     text-decoration: none;
 
@@ -164,7 +166,11 @@ $bg-color: #eeeeee !default;
         font-size: 22px;
     }
 }
-
+@media (max-width: 768px) {
+    main{
+        padding-top: 50px;
+    }
+}
 
 @media (max-width: $mobile-width) {
     .container {
