@@ -7,19 +7,24 @@
         $('.header').toggleClass('menu-active');
         $('body').toggleClass('overflow-hidden');
     })
+
+    
     //=======слайдеры=====
-    $('#slider1').slick({
-        infinite: false,
-        // autoplay: true,
-        autoplaySpeed: 1500,
-        pauseOnFocus: true,
-        pauseOnHover: true,
-        pauseOnDotsHover: true,
-        draggable: false,
-        waitForAnimate: false
-
-    });
-
+    if (!!($('#slider1').length)) {
+        $('#slider1').slick({
+            infinite: false,
+            // autoplay: true,
+            autoplaySpeed: 1500,
+            pauseOnFocus: true,
+            pauseOnHover: true,
+            pauseOnDotsHover: true,
+            draggable: false,
+            waitForAnimate: false
+    
+        });
+    }
+   
+if (!!($('#equipments-slider').length)) {
     $('#equipments-slider').slick({
         infinite: false,
         dots: true,
@@ -30,8 +35,9 @@
         pauseOnDotsHover: true,
         draggable: false,
         waitForAnimate: false
-
     });
+}
+   
 
     //=======скролл наверх=====
     let btn = $('.scroll__btn');
@@ -52,35 +58,59 @@
     });
 
     //========маска телефона=======
-    // $('input[type="tel"]').mask("+7 (999) 999-99-99");
+    $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
     // //============валидация============
-    // $('#formOrder').validate({
-    //     rules: {
-    //         name: {
-    //             required: true,
-    //             minlength: 2
-    //         },
-    //         phone: {
-    //             required: true,
-    //             minlength: 10
-    //         }
-    //     },
-    //     messages: {
-    //         name: {
-    //             required: '',
-    //             minlength: ''
-    //         },
-    //         phone: {
-    //             required: '',
-    //             minlength: ''
-    //         }
+    $('#formOrder').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            phone: {
+                required: true,
+                minlength: 10
+            }
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: ''
+            },
+            phone: {
+                required: '',
+                minlength: ''
+            }
 
-    //     },
-    //     errorClass: 'invalid'
-    // });
+        },
+        errorClass: 'invalid'
+    });
+    $('#formOrder2').validate({
+        rules: {
+            name2: {
+                required: true,
+                minlength: 2
+            },
+            phone2: {
+                required: true,
+                minlength: 10
+            }
+        },
+        messages: {
+            name2: {
+                required: '',
+                minlength: ''
+            },
+            phone2: {
+                required: '',
+                minlength: ''
+            }
 
-    //============стилизованный скролл================
+        },
+        errorClass: 'invalid'
+    });
+
+    
 
 
 })(jQuery);
