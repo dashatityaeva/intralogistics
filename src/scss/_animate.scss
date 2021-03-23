@@ -94,6 +94,28 @@
     -webkit-animation-delay: calc(var(--animate-delay)*7);
     animation-delay: calc(var(--animate-delay)*7)
 }
+.animate__animated.animate__delay-8s {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    -webkit-animation-delay: calc(var(--animate-delay)*8);
+    animation-delay: calc(var(--animate-delay)*8)
+}
+.animate__animated.animate__delay-9s {
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+    -webkit-animation-delay: calc(var(--animate-delay)97);
+    animation-delay: calc(var(--animate-delay)*9)
+}
+.animate__animated.animate__delay-10s {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    -webkit-animation-delay: calc(var(--animate-delay)*10);
+    animation-delay: calc(var(--animate-delay)*10)
+}
+
+
+
+
 .animate__animated.animate__faster {
     -webkit-animation-duration: .5s;
     animation-duration: .5s;

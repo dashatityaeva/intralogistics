@@ -43,8 +43,7 @@
     if (!!($('#promo-slider').length)) {
         $('#promo-slider').slick({
             infinite: true,
-            // dots: true,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 9000,
             pauseOnFocus: true,
             pauseOnHover: true,
@@ -58,30 +57,9 @@
     }
 
     //============promo-animation==============
-    
-    // $('#promo-slider').on('beforeChange', function(){
-    //     var currentSlide = $('#promo-slider').slick('slickCurrentSlide');
-    //     console.log(currentSlide);
-    //   });
-    // $('#promo-slider').on('reInit', function(slick){
-    //     console.log(slick);
-    //   });
-    // var currentSlide = $('#promo-slider').slick('slickCurrentSlide');
-    // console.log('currentSlide: ', currentSlide);
-
-  
-    // console.log(  $('#promo-slider').slick('getSlick'));
-    // $('#promo-slider').on('beforeChange', function(currentSlide){
-       
-        
-    //   });
-
-
-
-
-
-
-
+    $('#promo-slider').on('afterChange', function(event, slick, currentSlide){
+        $('.slick-current').addClass('anim');
+      });
 
     //=======скролл наверх=====
     let btn = $('.scroll__btn');
