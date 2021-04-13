@@ -1,3 +1,4 @@
+
 .promo {
     width: 100%;
     height: 590px;
@@ -82,6 +83,7 @@
             outline: none;
             cursor: pointer;
             border: 10px solid $blue;
+            border-right: 25px solid $blue;
 
             &:after {
                 content: '';
@@ -106,6 +108,7 @@
 
     &__slider-item {
         position: relative;
+        overflow: hidden;
     }
     &__slider-img {
         object-fit: contain;
@@ -120,11 +123,13 @@
     &__slider-img[data-pos="machinery1"] {
         position: relative;
         right: 16px;
+        // right: 1.4%;
     }
 
     &__slider-img[data-pos="machinery2"] {
         position: relative;
-        right: 45px;
+        // right: 45px;
+        right: 4%;
     }
 
     &__slider-text {
@@ -163,7 +168,6 @@
     &__dot {
         position: absolute;
         opacity: 0;
-
     }
 
     &__dot-text {
@@ -184,23 +188,28 @@
     &__dot[data-promo-dot="1"] {
         top: 70%;
         left: 22%;
-
     }
 
     &__dot[data-promo-dot="2"] {
         top: 30%;
-        left: 43%;
+        left: 44%;
     }
 
     &__dot[data-promo-dot="3"] {
         top: 55%;
         left: 55%;
     }
-
-
     &__dot[data-promo-dot="4"] {
         top: 24%;
         left: 67%;
+    }
+    &__dot[data-promo-dot="5"] {
+        top: 70%;
+        left: 22%;
+    }
+    &__dot[data-promo-dot="6"] {
+        top: 22%;
+        left: 52%;
     }
     &__slider-number {
         position: absolute;
@@ -215,6 +224,7 @@
     .promo__dot {
         opacity: 1;
     }
+    // 1 слайд
     .promo__dot[data-promo-dot="1"] .promo__dot-img{
         animation-name: zoomInLeft;
     }
@@ -245,5 +255,83 @@
     .promo__dot[data-promo-dot="4"] .promo__dot-text{
         animation-name: fadeInDown;
         animation-delay: 7s;
+    }
+    //2 слайд
+    .promo__dot[data-promo-dot="5"] .promo__dot-img{
+        animation-name: zoomInLeft;
+    }
+    .promo__dot[data-promo-dot="5"] .promo__dot-text{
+        animation-name: fadeInDown;
+        animation-delay: 1s;
+    }
+    .promo__dot[data-promo-dot="6"] .promo__dot-img{
+        animation-name: zoomInDown;
+        animation-delay: 2s;
+    }
+    .promo__dot[data-promo-dot="6"] .promo__dot-text{
+        animation-name: fadeInDown;
+        animation-delay: 3s;
+    }
+}
+
+@media (max-width: 1200px) {
+    .promo__slider-text_top {
+        top: 0;
+    }
+    .promo__slider-text_bottom {
+        bottom: 12%;
+    }
+}
+@media (max-width: 1100px) {
+    .promo__slider-img[data-pos="machinery2"] {
+        right: 5%;
+    }
+}
+@media (max-width: 1024px) {
+    .promo__slider .slick-next {
+        bottom: 30px;
+        width: 70px;
+    }
+    .promo__slider-number {
+        bottom: 2px;
+    }
+    .promo__slider-text {
+        font-size: 22px;
+        max-width: 220px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .promo__slider-img[data-pos="machinery2"] {
+        right: 5.6%;
+    }
+    .promo__dot[data-promo-dot="6"] {
+        top: 26%;
+        left: 52%;
+    }
+}
+@media (max-width: 650px) {
+    .promo__dot {
+        display: none;
+    }
+    .promo__slider-text_top {
+        color: #cce2ff;
+    }
+}
+@media (max-width: 544px) {
+    .promo__slider-img[data-pos=machinery1] {
+        right: 14px;
+    }
+    .promo__slider-img[data-pos="machinery2"] {
+        right: 6%;
+    }
+}
+@media (max-width: 425px) {
+    .promo__slider-img[data-pos=machinery1] {
+        right: 11px;
+    }
+    .promo__slider-img[data-pos="machinery2"] {
+        right: 6.8%;
     }
 }

@@ -28,9 +28,9 @@ function html() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
+        // .pipe(htmlmin({
+            // collapseWhitespace: true
+        // }))/
         .pipe(dest('dist'))
 }
 

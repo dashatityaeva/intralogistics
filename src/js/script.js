@@ -43,7 +43,7 @@
     if (!!($('#promo-slider').length)) {
         $('#promo-slider').slick({
             infinite: true,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 9000,
             pauseOnFocus: true,
             pauseOnHover: true,
@@ -60,6 +60,36 @@
     $('#promo-slider').on('afterChange', function(event, slick, currentSlide){
         $('.slick-current').addClass('anim');
       });
+      
+        //============hover for block with custom scrollbar==============
+      let machineryInfoElem = document.querySelectorAll('.machinery__info');
+      let dotsItemElem = document.querySelectorAll('.dots__item');
+      
+      const addFocus = (index) => {
+          dotsItemElem.forEach(dot => {
+              if (dot.dataset.dots === index) {
+                  dot.classList.add('current');
+              }
+          })
+      }
+      const removeFocus = (index) => {
+          dotsItemElem.forEach(dot => {
+              if (dot.dataset.dots === index) {
+                  dot.classList.remove('current');
+              }
+          })
+      }
+      
+      
+      machineryInfoElem.forEach(item => {
+          let index = item.dataset.text;
+          item.addEventListener('mouseover', function () {
+              addFocus(index);
+          });
+          item.addEventListener('mouseout', function () {
+              removeFocus(index);
+          });
+      })
 
     //=======скролл наверх=====
     let btn = $('.scroll__btn');
@@ -80,89 +110,69 @@
     });
 
     //========маска телефона=======
-    $('input[type="tel"]').mask("+7 (999) 999-99-99");
+
+   if (!!$('input[type="tel"]').length) {
+       $('input[type="tel"]').mask("+7 (999) 999-99-99");
+   } 
 
     // //============валидация============
-    $('#formOrder').validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
-            },
-            phone: {
-                required: true,
-                minlength: 10
-            }
-        },
-        messages: {
-            name: {
-                required: '',
-                minlength: ''
-            },
-            phone: {
-                required: '',
-                minlength: ''
-            }
-
-        },
-        errorClass: 'invalid'
-    });
-    $('#formOrder2').validate({
-        rules: {
-            name2: {
-                required: true,
-                minlength: 2
-            },
-            phone2: {
-                required: true,
-                minlength: 10
-            }
-        },
-        messages: {
-            name2: {
-                required: '',
-                minlength: ''
-            },
-            phone2: {
-                required: '',
-                minlength: ''
-            }
-
-        },
-        errorClass: 'invalid'
-    });
+    // if (!!$('#formOrder')) {
+    //     console.log('true');
+    //     $('#formOrder').validate({
+    //         rules: {
+    //             name: {
+    //                 required: true,
+    //                 minlength: 2
+    //             },
+    //             phone: {
+    //                 required: true,
+    //                 minlength: 10
+    //             }
+    //         },
+    //         messages: {
+    //             name: {
+    //                 required: '',
+    //                 minlength: ''
+    //             },
+    //             phone: {
+    //                 required: '',
+    //                 minlength: ''
+    //             }
+    
+    //         },
+    //         errorClass: 'invalid'
+    //     });
+    // }
+    // if (!!$('#formOrder2')) {
+    //     $('#formOrder2').validate({
+    //         rules: {
+    //             name2: {
+    //                 required: true,
+    //                 minlength: 2
+    //             },
+    //             phone2: {
+    //                 required: true,
+    //                 minlength: 10
+    //             }
+    //         },
+    //         messages: {
+    //             name2: {
+    //                 required: '',
+    //                 minlength: ''
+    //             },
+    //             phone2: {
+    //                 required: '',
+    //                 minlength: ''
+    //             }
+    
+    //         },
+    //         errorClass: 'invalid'
+    //     });
+    // }
+   
 
 
 
 
 })(jQuery);
 
-let machineryInfoElem = document.querySelectorAll('.machinery__info');
-let dotsItemElem = document.querySelectorAll('.dots__item');
-
-
-const addFocus = (index) => {
-    dotsItemElem.forEach(dot => {
-        if (dot.dataset.dots === index) {
-            dot.classList.add('current');
-        }
-    })
-}
-const removeFocus = (index) => {
-    dotsItemElem.forEach(dot => {
-        if (dot.dataset.dots === index) {
-            dot.classList.remove('current');
-        }
-    })
-}
-
-
-machineryInfoElem.forEach(item => {
-    let index = item.dataset.text;
-    item.addEventListener('mouseover', function () {
-        addFocus(index);
-    });
-    item.addEventListener('mouseout', function () {
-        removeFocus(index);
-    });
-})
